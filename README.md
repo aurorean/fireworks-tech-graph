@@ -25,14 +25,31 @@ User: "画一张 Mem0 的架构图，暗黑风格"
 
 ## Showcase
 
-| Style | Sample |
-|-------|--------|
-| **Style 1** — Flat Icon (default) | ![](assets/samples/sample-style1-flat.png) |
-| **Style 2** — Dark Terminal | ![](assets/samples/sample-style2-dark.png) |
-| **Style 3** — Blueprint | ![](assets/samples/sample-style3-blueprint.png) |
-| **Style 4** — Notion Clean | ![](assets/samples/sample-style4-notion.png) |
-| **Style 5** — Glassmorphism | ![](assets/samples/sample-style5-glass.png) |
-| **AI Domain** — Mem0 Architecture | ![](assets/samples/sample-mem0.png) |
+> All samples exported at 1920px width (2× retina) via `rsvg-convert`. PNG is lossless and the right choice for technical diagrams — sharp edges, no JPEG compression artifacts on text/lines.
+
+### Style 1 — Flat Icon (default)
+*Agentic RAG Pipeline — white background, colorful semantic arrows*
+![Style 1 — Flat Icon](assets/samples/sample-style1-flat.png)
+
+### Style 2 — Dark Terminal
+*Tool Call Flow — dark background, neon accents, monospace font*
+![Style 2 — Dark Terminal](assets/samples/sample-style2-dark.png)
+
+### Style 3 — Blueprint
+*Microservices Architecture — deep blue background, grid lines, cyan strokes*
+![Style 3 — Blueprint](assets/samples/sample-style3-blueprint.png)
+
+### Style 4 — Notion Clean
+*Agent Memory Types — minimal white, single accent color*
+![Style 4 — Notion Clean](assets/samples/sample-style4-notion.png)
+
+### Style 5 — Glassmorphism
+*Multi-Agent Collaboration — dark gradient background, frosted-glass cards*
+![Style 5 — Glassmorphism](assets/samples/sample-style5-glass.png)
+
+### AI Domain — Mem0 Memory Architecture
+*Full memory architecture with swim lanes, cylinders, and semantic read/write arrows*
+![Mem0 Architecture](assets/samples/sample-mem0.png)
 
 ---
 
@@ -134,6 +151,90 @@ Draw a multi-agent collaboration diagram --style glassmorphism
 ```
 Create a tool call flow diagram --output /tmp/diagrams/
 ```
+
+---
+
+## Example Prompts by Scenario
+
+### AI/Agent Systems
+
+```
+画一张 Agentic RAG 和普通 RAG 的对比图，用 Notion 极简风
+```
+→ Comparison matrix: RAG vs Agentic RAG, covering retrieval strategy, agent loop, tool use
+
+```
+生成一张 Mem0 记忆架构图，包含向量库、图数据库、KV 存储和记忆管理器
+```
+→ Memory Architecture with swim lanes: Input → Memory Manager → Storage tiers → Retrieval
+
+```
+画一张 Multi-Agent 协作图：Orchestrator 调度 3 个 SubAgent（搜索/计算/代码执行），最后汇聚到 Aggregator
+```
+→ Agent Architecture with hexagons, tool layers, and result aggregation
+
+```
+可视化一下 Tool Call 的执行流程：LLM → Tool Selector → Execution → Parser → 回到 LLM
+```
+→ Flowchart with decision loop showing tool invocation cycle
+
+```
+画一张 Agent 的 5 种记忆类型图：感知记忆、工作记忆、情景记忆、语义记忆、程序记忆
+```
+→ Mind map or layered architecture showing memory tiers from sensory to procedural
+
+### Infrastructure & Cloud
+
+```
+帮我画一张微服务架构图：Client → API Gateway → [用户服务 / 订单服务 / 支付服务] → PostgreSQL + Redis
+```
+→ Architecture diagram with horizontal layers, swim lanes per service cluster
+
+```
+生成一张数据管道图：Kafka 消费数据 → Spark 处理 → 写入 S3 → Athena 查询
+```
+→ Data flow diagram with labeled arrows (stream / batch / query)
+
+```
+画一张 Kubernetes 部署架构：Ingress → Service → [Pod × 3] → ConfigMap + PersistentVolume
+```
+→ Architecture with dashed containers per namespace, solid arrows for traffic flow
+
+### API & Sequence Flows
+
+```
+画一张 OAuth2 授权码流程的序列图：用户 → 客户端 → 授权服务器 → 资源服务器
+```
+→ Sequence diagram with vertical lifelines and activation boxes
+
+```
+帮我画一张 ChatGPT Plugin 的调用时序图
+```
+→ Sequence: User → ChatGPT → Plugin Manifest → API → Response chain
+
+### Decision & Process Flows
+
+```
+画一张 AI 应用上线前的质检流程图：代码审查 → 安全扫描 → 性能测试 → 人工审核 → 发布
+```
+→ Flowchart with diamond decision nodes and parallel branches
+
+```
+生成一张 RAG vs Fine-tuning vs Prompt Engineering 的功能对比图
+```
+→ Comparison matrix with checked/unchecked cells across cost, latency, accuracy, flexibility
+
+### Concept Maps
+
+```
+帮我可视化一下 LLM 应用的技术栈：从底层模型到 SDK 到应用框架到部署层
+```
+→ Layered architecture or mind map from model layer to product layer
+
+```
+画一张 AI Agent 的核心能力地图：感知 / 记忆 / 推理 / 行动 / 学习
+```
+→ Mind map with central "AI Agent" node and 5 radial branches
 
 ---
 

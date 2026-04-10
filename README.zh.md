@@ -23,14 +23,31 @@
 
 ## 效果展示
 
-| 风格 | 示例图 |
-|------|--------|
-| **风格 1** — 扁平图标风（默认） | ![](assets/samples/sample-style1-flat.png) |
-| **风格 2** — 暗黑极客风 | ![](assets/samples/sample-style2-dark.png) |
-| **风格 3** — 工程蓝图风 | ![](assets/samples/sample-style3-blueprint.png) |
-| **风格 4** — Notion 极简风 | ![](assets/samples/sample-style4-notion.png) |
-| **风格 5** — 玻璃态卡片风 | ![](assets/samples/sample-style5-glass.png) |
-| **AI 领域** — Mem0 架构图 | ![](assets/samples/sample-mem0.png) |
+> 所有示例图均以 1920px 宽度（2× 视网膜分辨率）通过 `rsvg-convert` 导出为 **PNG 格式**。技术图应选 PNG（无损），JPG 有损压缩会在文字和线条边缘产生噪点。
+
+### 风格 1 — 扁平图标风（默认）
+*Agentic RAG 流程图 — 白底，语义色箭头*
+![风格 1 — 扁平图标风](assets/samples/sample-style1-flat.png)
+
+### 风格 2 — 暗黑极客风
+*Tool Call 执行流程 — 深色背景，Neon 配色，等宽字体*
+![风格 2 — 暗黑极客风](assets/samples/sample-style2-dark.png)
+
+### 风格 3 — 工程蓝图风
+*微服务架构图 — 深蓝底，网格线，青色描边*
+![风格 3 — 工程蓝图风](assets/samples/sample-style3-blueprint.png)
+
+### 风格 4 — Notion 极简风
+*Agent 记忆类型图 — 白底极简，单一强调色*
+![风格 4 — Notion 极简风](assets/samples/sample-style4-notion.png)
+
+### 风格 5 — 玻璃态卡片风
+*Multi-Agent 协作图 — 深色渐变底，磨砂玻璃卡片*
+![风格 5 — 玻璃态卡片风](assets/samples/sample-style5-glass.png)
+
+### AI 领域 — Mem0 记忆架构图
+*完整记忆架构，含泳道、圆柱体存储、读写语义箭头*
+![Mem0 架构图](assets/samples/sample-mem0.png)
 
 ---
 
@@ -117,6 +134,90 @@ generate diagram / draw diagram / create chart / visualize
 ```
 画一张 Tool Call 流程图 --output /tmp/diagrams/
 ```
+
+---
+
+## 场景示例集
+
+### AI/Agent 系统
+
+```
+画一张 Agentic RAG 和普通 RAG 的对比图，用 Notion 极简风
+```
+→ 功能矩阵对比：检索策略、Agent 循环、工具调用、延迟、成本
+
+```
+生成一张 Mem0 记忆架构图，包含向量库、图数据库、KV 存储和记忆管理器
+```
+→ 分泳道记忆架构：Input → Memory Manager → 存储层 → 检索输出
+
+```
+画一张 Multi-Agent 协作图：Orchestrator 调度 3 个 SubAgent（搜索/计算/代码执行），汇聚到 Aggregator
+```
+→ Agent 架构，六边形节点 + 工具层 + 结果聚合
+
+```
+可视化一下 Tool Call 的执行流程：LLM → Tool Selector → Execution → Parser → 回到 LLM
+```
+→ 含决策循环的流程图，展示工具调用的完整生命周期
+
+```
+画一张 Agent 的 5 种记忆类型图：感知记忆、工作记忆、情景记忆、语义记忆、程序记忆
+```
+→ 思维导图或分层架构，从感官输入到程序技能的记忆层级
+
+### 基础设施与云架构
+
+```
+帮我画一张微服务架构图：Client → API Gateway → [用户服务 / 订单服务 / 支付服务] → PostgreSQL + Redis
+```
+→ 水平分层架构，每个服务集群一个泳道
+
+```
+生成一张数据管道图：Kafka 消费数据 → Spark 处理 → 写入 S3 → Athena 查询
+```
+→ 数据流图，每条箭头标注数据类型（stream / batch / query）
+
+```
+画一张 Kubernetes 部署架构：Ingress → Service → [Pod × 3] → ConfigMap + PersistentVolume
+```
+→ 架构图，Namespace 用虚线框，流量用实线箭头
+
+### API 与时序流程
+
+```
+画一张 OAuth2 授权码流程的序列图：用户 → 客户端 → 授权服务器 → 资源服务器
+```
+→ 序列图，垂直生命线 + 激活框
+
+```
+帮我画一张 ChatGPT Plugin 的调用时序图
+```
+→ 时序：User → ChatGPT → Plugin Manifest → API → 响应链
+
+### 决策与流程图
+
+```
+画一张 AI 应用上线前的质检流程图：代码审查 → 安全扫描 → 性能测试 → 人工审核 → 发布
+```
+→ 流程图，含菱形决策节点和并行分支
+
+```
+生成一张 RAG vs Fine-tuning vs Prompt Engineering 的功能对比图
+```
+→ 功能矩阵，对比成本、延迟、准确率、灵活性
+
+### 概念图与知识图谱
+
+```
+帮我可视化一下 LLM 应用的技术栈：从底层模型到 SDK 到应用框架到部署层
+```
+→ 分层架构图或思维导图，从模型层到产品层
+
+```
+画一张 AI Agent 的核心能力地图：感知 / 记忆 / 推理 / 行动 / 学习
+```
+→ 以"AI Agent"为中心的放射状思维导图，5 个核心能力分支
 
 ---
 
