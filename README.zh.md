@@ -1,3 +1,5 @@
+[English](README.md) | [中文](README.zh.md)
+
 # fireworks-tech-graph
 
 > 不用手画图了。用中文描述你的系统，几秒钟得到可直接发布的 SVG + PNG 技术图。

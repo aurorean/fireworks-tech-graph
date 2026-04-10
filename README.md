@@ -1,3 +1,5 @@
+[English](README.md) | [中文](README.zh.md)
+
 # fireworks-tech-graph
 
 > **Stop drawing diagrams by hand.** Describe your system in English or Chinese — get publication-ready SVG + PNG technical diagrams in seconds.
